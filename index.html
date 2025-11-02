@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precision3D — 3D Modeling Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+<header class="sticky top-0 z-40 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <nav class="container h-16 flex items-center justify-between">
+    <a href="index.html" class="font-extrabold tracking-tight text-xl">
+      <span class="text-violet-400">Precision</span>3D
+    </a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="process.html" class="nav-link">How It Works</a>
+      <a href="order.html" class="btn">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section>
+    <div class="container pt-20 pb-10 md:pt-28 md:pb-16 grid gap-10 md:grid-cols-2 items-center">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          From <span class="text-violet-400">idea</span> to <span class="text-violet-400">print</span> — fast.
+        </h1>
+        <p class="text-neutral-300 text-lg">
+          We design parametric, print-ready 3D models. Mechanical parts, prototypes, and functional prints—optimized for your printer and material.
+        </p>
+        <div class="flex gap-3">
+          <a href="order.html" class="btn">Start a Project</a>
+          <a href="portfolio.html" class="btn bg-neutral-800 hover:bg-neutral-700">View Portfolio</a>
+        </div>
+        <ul class="grid grid-cols-3 gap-4 text-sm text-neutral-400 pt-4">
+          <li>Parametric CAD</li>
+          <li>FDM + Resin</li>
+          <li>Manufacturing-ready STEP</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-3">What you get</h3>
+        <ul class="list-disc pl-5 space-y-2 text-neutral-300">
+          <li>Source CAD (OpenSCAD / STEP / F3D)</li>
+          <li>Printable STL / 3MF with orientation</li>
+          <li>Slicer profile recommendations</li>
+          <li>Iterative revisions until it fits</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container grid-cards mt-6">
+      <div class="card">
+        <h4 class="font-semibold mb-2">Starter</h4>
+        <p class="text-neutral-300 text-sm mb-4">Simple part, 1 revision.</p>
+        <a href="order.html#starter" class="btn">Buy / Request</a>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold mb-2">Pro</h4>
+        <p class="text-neutral-300 text-sm mb-4">Mechanical part, 3 revisions, STEP + STL.</p>
+        <a href="order.html#pro" class="btn">Buy / Request</a>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold mb-2">Enterprise</h4>
+        <p class="text-neutral-300 text-sm mb-4">Complex assembly, priority support.</p>
+        <a href="order.html#enterprise" class="btn">Buy / Request</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="border-t border-neutral-800 mt-16">
+  <div class="container py-10 text-sm text-neutral-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <p>© <span id="year"></span> Precision3D — All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="mailto:hello@precision3d.example" class="underline">hello@precision3d.example</a>
+      <a href="#" class="underline opacity-70">Privacy</a>
+      <a href="#" class="underline opacity-70">Terms</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

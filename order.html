@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precision3D — 3D Modeling Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+
+<!-- PayPal JS SDK: replace YOUR_CLIENT_ID with your real PayPal client ID -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD" data-sdk-integration-source="button-factory"></script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+<header class="sticky top-0 z-40 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <nav class="container h-16 flex items-center justify-between">
+    <a href="index.html" class="font-extrabold tracking-tight text-xl">
+      <span class="text-violet-400">Precision</span>3D
+    </a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="process.html" class="nav-link">How It Works</a>
+      <a href="order.html" class="btn">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+<main class="container pt-16 pb-24">
+  <h2 class="text-3xl font-bold mb-6">Start Your Project</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <form class="card space-y-4" onsubmit="event.preventDefault(); alert('Thanks! We will email you shortly.');">
+      <div>
+        <label class="block text-sm mb-1">Name</label>
+        <input required class="w-full bg-neutral-800 rounded-xl px-3 py-2" placeholder="Jane Doe" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Email</label>
+        <input required type="email" class="w-full bg-neutral-800 rounded-xl px-3 py-2" placeholder="jane@example.com" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Project Description</label>
+        <textarea rows="5" class="w-full bg-neutral-800 rounded-xl px-3 py-2" placeholder="Describe your idea, dimensions, constraints..."></textarea>
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Choose Package</label>
+        <select id="package" class="w-full bg-neutral-800 rounded-xl px-3 py-2">
+          <option value="starter" data-price="49">Starter — $49</option>
+          <option value="pro" data-price="149">Pro — $149</option>
+          <option value="enterprise" data-price="399">Enterprise — $399</option>
+        </select>
+      </div>
+      <p class="text-sm text-neutral-400">We’ll email you within 24h to confirm scope and timelines.</p>
+    </form>
+
+    <div class="card">
+      <h3 class="font-semibold mb-2">Pay Securely</h3>
+      <p class="text-neutral-300 text-sm mb-4">You can pay now to reserve the work slot. Refunds available if scope doesn’t match.</p>
+      <div id="paypal-button-container"></div>
+      <p class="text-xs text-neutral-500 mt-3">Set your PayPal Client ID by editing the PayPal &lt;script&gt; tag in this page.</p>
+    </div>
+  </div>
+</main>
+<footer class="border-t border-neutral-800 mt-16">
+  <div class="container py-10 text-sm text-neutral-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <p>© <span id="year"></span> Precision3D — All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="mailto:hello@precision3d.example" class="underline">hello@precision3d.example</a>
+      <a href="#" class="underline opacity-70">Privacy</a>
+      <a href="#" class="underline opacity-70">Terms</a>
+    </div>
+  </div>
+</footer>
+<script>
+  function getSelectedPrice() { 
+    const sel = document.getElementById('package'); 
+    return sel.options[sel.selectedIndex].dataset.price || '49'; 
+  }
+  if (window.paypal) {
+    paypal.Buttons({
+      style: { layout: 'vertical' },
+      createOrder: (data, actions) => actions.order.create({
+        purchase_units: [{ amount: { value: String(getSelectedPrice()) }, description: '3D Modeling Service Package' }]
+      }),
+      onApprove: (data, actions) => actions.order.capture().then(details => {
+        alert(`Thanks ${details.payer.name.given_name}! Payment confirmed.`)
+      })
+    }).render('#paypal-button-container');
+  }
+</script>
+</body>
+</html>

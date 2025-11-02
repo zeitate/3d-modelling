@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precision3D — 3D Modeling Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+<header class="sticky top-0 z-40 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <nav class="container h-16 flex items-center justify-between">
+    <a href="index.html" class="font-extrabold tracking-tight text-xl">
+      <span class="text-violet-400">Precision</span>3D
+    </a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="process.html" class="nav-link">How It Works</a>
+      <a href="order.html" class="btn">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+<main class="container pt-16 pb-24">
+  <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
+  <p class="text-neutral-300 mb-8 max-w-2xl">
+    A selection of recent projects. Each model is designed for printability—correct wall thicknesses, tolerances, and orientation.
+  </p>
+  <div class="grid-cards">
+    <article class="card flex flex-col gap-3">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200" class="rounded-xl aspect-video object-cover" alt="Parametric Camera Mount" />
+      <h3 class="font-semibold text-lg">Parametric Camera Mount</h3>
+      <p class="text-sm text-neutral-300">Adjustable mount with heat-set inserts and 20×20 extrusion interface.</p>
+      <div class="text-xs text-neutral-400">Tech: Fusion 360, OpenSCAD, PETG</div>
+    </article>
+    <article class="card flex flex-col gap-3">
+      <img src="https://images.unsplash.com/photo-1619957984473-137c3d70b203?q=80&w=1200" class="rounded-xl aspect-video object-cover" alt="Snap-fit Cable Manager" />
+      <h3 class="font-semibold text-lg">Snap-fit Cable Manager</h3>
+      <p class="text-sm text-neutral-300">No-support clip with tuned flexibility and clearances.</p>
+      <div class="text-xs text-neutral-400">Tech: FreeCAD, PLA</div>
+    </article>
+    <article class="card flex flex-col gap-3">
+      <img src="https://images.unsplash.com/photo-1615529162924-1d5e1c2a1c08?q=80&w=1200" class="rounded-xl aspect-video object-cover" alt="Resin Miniature" />
+      <h3 class="font-semibold text-lg">Resin Miniature</h3>
+      <p class="text-sm text-neutral-300">Hollowed SLA model with drain holes and pre-supported orientation.</p>
+      <div class="text-xs text-neutral-400">Tech: Blender, SLA</div>
+    </article>
+  </div>
+</main>
+<footer class="border-t border-neutral-800 mt-16">
+  <div class="container py-10 text-sm text-neutral-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <p>© <span id="year"></span> Precision3D — All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="mailto:hello@precision3d.example" class="underline">hello@precision3d.example</a>
+      <a href="#" class="underline opacity-70">Privacy</a>
+      <a href="#" class="underline opacity-70">Terms</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

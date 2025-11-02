@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precision3D — 3D Modeling Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+<header class="sticky top-0 z-40 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <nav class="container h-16 flex items-center justify-between">
+    <a href="index.html" class="font-extrabold tracking-tight text-xl">
+      <span class="text-violet-400">Precision</span>3D
+    </a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="process.html" class="nav-link">How It Works</a>
+      <a href="order.html" class="btn">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+<main class="container pt-16 pb-24">
+  <h2 class="text-3xl font-bold mb-6">How It Works</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card"><div class="text-violet-400 font-bold">Step 1</div><h3 class="text-xl font-semibold">Discovery</h3><p class="text-neutral-300">Define goals, constraints, printer/material, and critical dimensions.</p></div>
+    <div class="card"><div class="text-violet-400 font-bold">Step 2</div><h3 class="text-xl font-semibold">Concept & Quote</h3><p class="text-neutral-300">We propose concepts, scope, and pricing tiers.</p></div>
+    <div class="card"><div class="text-violet-400 font-bold">Step 3</div><h3 class="text-xl font-semibold">Parametric CAD</h3><p class="text-neutral-300">Editable model built in OpenSCAD/CadQuery/Fusion.</p></div>
+    <div class="card"><div class="text-violet-400 font-bold">Step 4</div><h3 class="text-xl font-semibold">DFM Review</h3><p class="text-neutral-300">Check overhangs, walls, clearances, and orientation.</p></div>
+    <div class="card"><div class="text-violet-400 font-bold">Step 5</div><h3 class="text-xl font-semibold">Delivery</h3><p class="text-neutral-300">You receive STL/3MF + source CAD + slicer settings.</p></div>
+  </div>
+  <div class="card mt-8">
+    <h3 class="font-semibold mb-2">What we deliver</h3>
+    <ul class="list-disc pl-5 text-neutral-300 space-y-1">
+      <li>Editable CAD source (OpenSCAD / STEP / F3D / CadQuery)</li>
+      <li>Printable STL/3MF with units and orientation</li>
+      <li>Slicer profiles and material settings</li>
+      <li>Changelog and simple license</li>
+    </ul>
+  </div>
+</main>
+<footer class="border-t border-neutral-800 mt-16">
+  <div class="container py-10 text-sm text-neutral-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <p>© <span id="year"></span> Precision3D — All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="mailto:hello@precision3d.example" class="underline">hello@precision3d.example</a>
+      <a href="#" class="underline opacity-70">Privacy</a>
+      <a href="#" class="underline opacity-70">Terms</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
